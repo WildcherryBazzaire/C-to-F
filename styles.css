@@ -1,0 +1,18 @@
+table {
+  width: 50%;
+  display: table;
+  margin: 25% auto 0 auto;
+  font-size: 150%;
+}
+
+tr {
+  margin: 5% 0;
+}
+
+.celsius {
+  background-color: grey;
+}
+
+.Fahrenheit {
+  background-color: pink;
+}
