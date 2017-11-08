@@ -1,15 +1,48 @@
+table, #config, p, #button, input {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 table {
   width: 50%;
   display: table;
-  margin: 25% auto 0 auto;
+  margin: 15% auto 0% auto;
   font-size: 150%;
+
 }
 
-input {
-  width: 5%; 
+#config {
+  width: 50%;
+  height: 50%;
+  display: table;
+  margin: 10% auto 0 auto;
+}
+
+#config > p {
+  font-size: 150%;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+#config > input {
+  width: 15%;
+  display: flex;
+  margin: 5% auto;
   outline: none;
-  padding: 0.5%;
-  font-size: 110%;
+  padding: 0.75%;
+  font-size: 132%;
+  text-align: center;
+
+  border: 5% solid black;
+}
+
+#config > #button {
+  display: table;
+  margin: 0% auto 0% auto;
+  width: 15%;
+  height: 10%;
+  font-size: 130%;
+  text-decoration: none;
 }
 
 tr {

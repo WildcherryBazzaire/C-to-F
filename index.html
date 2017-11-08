@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Temperature Conversion(only F)</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
 <body>
-  <p>Staring Value</p>
-  <input type="text" id="Starting" value="" placeholder="Starting value" />
-  <p>Ending Value</p>
-  <input type="text" id="Ending" value="" placeholder="Starting value" />
-  <button type="button" name="button" onclick="values()">Enter</button>
-  <script src="magic.js"></script>
+  <div id="config">
+    <p>Starting Value</p>
+    <input type="text" id="Starting" value="" placeholder="Starting" />
+    <p>Ending Value</p>
+    <input type="text" id="Ending" value="" placeholder="Ending" />
+    <p id="button" onclick="values()">Enter</p>
+    <script src="magic.js"></script>
+  </div>
 </body>
 </html>
