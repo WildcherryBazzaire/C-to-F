@@ -5,6 +5,13 @@ table {
   font-size: 150%;
 }
 
+input {
+  width: 5%; 
+  outline: none;
+  padding: 0.5%;
+  font-size: 110%;
+}
+
 tr {
   margin: 5% 0;
 }

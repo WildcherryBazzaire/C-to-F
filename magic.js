@@ -1,5 +1,9 @@
 console.log('the shining')
 
+var table = document.createElement("TABLE"); //creates the table of conversions
+table.setAttribute("id","table");
+
+
 var intialValues = [20,90]; //inital values to start with
 
 var conversionC = function(fahrenheit) {
@@ -16,19 +20,20 @@ var values = function() {
   var ending = parseInt(document.getElementById("Ending").value);
 
   if (isNaN(starting) == true || isNaN(ending) == true) //checikng to see if the values are integers
-    alert("T00 HOT 4 M£!");
-  else
+    alert("Cranb3rry Sauce");
+  else {
+    while(table.rows.length > 0) {
+      table.deleteRow(0);
+    }
     automagicallyTable(starting,ending);
-
+  }
 }
 
 var automagicallyTable = function(starting,ending) {
   //document.getElementbyId("table").remove();
-  var table = document.createElement("TABLE");
-  table.setAttribute("id","table");
   var j = starting; // starting value that will increment till ending value
 
-  for(var i=0; i <= Math.round((ending-starting)/5); i++) { //i = # of rows
+  for(var i=0; i <= Math.round(Math.abs((ending-starting)/5)); i++) { //i = # of rows
     var row = table.insertRow(i);
 
     for(var k=0; k < 3; k++) { // k = the # of cells in row i
@@ -52,4 +57,4 @@ var automagicallyTable = function(starting,ending) {
 
   }
 
-automagicallyTable(intialValues[0],intialValues[1])
+automagicallyTable(intialValues[0],intialValues[1]);
