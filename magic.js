@@ -3,7 +3,6 @@ console.log('the shining')
 var table = document.createElement("TABLE"); //creates the table of conversions
 table.setAttribute("id","table");
 
-
 var intialValues = [20,90]; //inital values to start with
 
 var conversionC = function(fahrenheit) {
@@ -33,7 +32,7 @@ var automagicallyTable = function(starting,ending) {
   //document.getElementbyId("table").remove();
   var j = starting; // starting value that will increment till ending value
 
-  for(var i=0; i <= Math.round(Math.abs((ending-starting)/5)); i++) { //i = # of rows
+  for(var i=0; i <= Math.round(Math.abs((ending-starting)/5)); i++) { //i = # of rows; equation can now start backwards in order now
     var row = table.insertRow(i);
 
     for(var k=0; k < 3; k++) { // k = the # of cells in row i
