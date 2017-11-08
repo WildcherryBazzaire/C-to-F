@@ -1,14 +1,21 @@
-table, #config, p, #button, input {
+body {
+  background-color: black;
+}
+
+table, #config, p, #button {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  color: white;
 }
 
 table {
+  border: 2px solid white;
   width: 50%;
   display: table;
   margin: 15% auto 0% auto;
   font-size: 150%;
 
 }
+
 
 #config {
   width: 50%;
@@ -32,7 +39,7 @@ table {
   padding: 0.75%;
   font-size: 132%;
   text-align: center;
-
+  font-family: 'Barlow Semi Condensed', sans-serif;
   border: 5% solid black;
 }
 
@@ -43,6 +50,7 @@ table {
   height: 10%;
   font-size: 130%;
   text-decoration: none;
+  border: 2px solid white;
 }
 
 tr {
