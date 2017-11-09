@@ -17,22 +17,23 @@ var values = function() {
 
   var starting = parseInt(document.getElementById("Starting").value); //parse int: checks if integer or not
   var ending = parseInt(document.getElementById("Ending").value);
+  var increments = parseInt(document.getElementById("Increment").value);
 
-  if (isNaN(starting) == true || isNaN(ending) == true) //checikng to see if the values are integers
+  if (isNaN(starting) == true || isNaN(ending) == true || isNaN(increments) == true)  //checikng to see if the values are integers
     alert("Cranb3rry Sauce");
   else {
     while(table.rows.length > 0) {
       table.deleteRow(0);
     }
-    automagicallyTable(starting,ending);
+    automagicallyTable(starting,ending,increments);
   }
 }
 
-var automagicallyTable = function(starting,ending) {
+var automagicallyTable = function(starting,ending,increment) {
   //document.getElementbyId("table").remove();
   var j = starting; // starting value that will increment till ending value
 
-  for(var i=0; i <= Math.round(Math.abs((ending-starting)/5) + 1); i++) { //i = # of rows; equation can now start backwards in order now
+  for(var i=0; i <= Math.round(Math.abs((ending-starting)/increment) + 1); i++) { //i = # of rows; equation can now start backwards in order now
     var row = table.insertRow(i);
     for(var k=0; k < 3; k++) { // k = the # of cells in row i
       if(i === 0) {
@@ -63,7 +64,7 @@ var automagicallyTable = function(starting,ending) {
       }
     }
     if(i !== 0)
-      j += 5; //incremnets by 5 everytime row is added, the rows added by the equation will stop it if it reaches it ending
+      j += increment; //incremnets by 5 everytime row is added, the rows added by the equation will stop it if it reaches it ending
   }
 
   document.body.appendChild(table);
